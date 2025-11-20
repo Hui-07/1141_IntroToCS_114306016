@@ -1,0 +1,169 @@
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    margin: 0;
+}
+
+.main-container {
+    width: 1000px;
+    background-color: #EFF7F6;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.left-panel {
+    background-color: #F2B5D4;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding: 0;
+    width: 30%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.photo-panel {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.photo-panel img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.text-content {
+    padding: 20px 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.info-section h3 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.school-logo img {
+    margin-top: 30px; 
+    width: 120px;
+}
+
+.right-panel {
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    color: #F7D6E0;
+    border-bottom: 2px solid #F7D6E0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.year {
+    font-weight: bold;
+    color: #F7D6E0;
+    width: 120px;
+    flex-shrink: 0;
+}
+
+.description {
+    color: #333;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #E3DAFF;
+    color: #333;
+    padding: 8px 15px;
+    margin-right: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    background-color: #AB4967;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #EDF2F4;
+}
+
+.card ul {
+    padding-left: 20px;
+}
+
+.card li {
+    margin-bottom: 10px;
+}
+
+.card a {
+    text-decoration: none;
+    color: #F6F0ED;
+    font-weight: bold;
+}
+
+.card a:hover {
+    color: #D8D8F6;
+}
+
+.music-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    text-align: center;
+}
+
+.music-item {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    width: 22%;
+}
+
+
+.music-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.music-note {
+    margin-top: 20px;
+    color: #7f8c8d;
+    font-size: 0.9em;
+    font-style: italic;
+}
