@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>114306016_HW7_1A2B</title>
+</head>
+<body>
+    <h1>114306016_HW7_1A2B</h1>
+    Enter 4 unique numbers
+    <input id="userGuess" type="text">
+    <button onclick="play()">Guess!</button>
+    <div id="record"></div>
+
+<script>
+    var answer = generateAnswer();
+    var count = 0;
+
+    function generateAnswer() {
+        var numberList = [0,1,2,3,4,5,6,7,8,9];
+        var secret = [];
+        for (var i = 0; i < 4; i++) {
+            var index = Math.floor(Math.random() * numberList.length);
+            var number = numberList.splice(index, 1)[0];
+            secret.push(number);
+        }
+
+        console.log("答案是:", secret); 
+        return secret;
+    }
+
+    function play() {
+        var inputField = document.getElementById('userGuess');
+        var guess = inputField.value;
+        inputField.value = ""; 
+
+        if (isValid(guess) == false) {
+            return;
+        }
+
+        count++;
+
+        var result = checkAB(guess);
+
+        var recordDiv = document.getElementById("record");
+        recordDiv.innerHTML += "<p>第" + count + "次: " + guess + " -> " + result + "</p>";
+
+        if (result == "4A0B") {
+            alert("恭喜答對！你總共猜了 " + count + " 次");
+        }
+    } 
+    function checkAB(guess) {
+        var a = 0;
+        var b = 0;
+        for (var i = 0; i < 4; i++) {
+            var currentNum = Number(guess[i]);
+            if (currentNum == answer[i]) {
+                a++;
+            } 
+            else if (answer.indexOf(currentNum) != -1) {
+                b++;
+            }
+        }
+        return a + "A" + b + "B";
+    }
+
+    function isValid(guess) {
+        // 檢查長度
+        if (guess.length != 4) {
+            alert("格式錯誤：請輸入 4 個數字！");
+            return false;
+        }
+
+        if (isNaN(guess)) {
+            alert("格式錯誤：請輸入純數字！");
+            return false;
+        }
+
+        for (var i = 0; i < guess.length; i++) {
+            for (var j = i + 1; j < guess.length; j++) {
+                if (guess[i] == guess[j]) {
+                    alert("格式錯誤：數字不能重複！");
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+</script>
+</body>
+</html>
