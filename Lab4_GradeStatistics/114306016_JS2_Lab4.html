@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <title>Grade Statistics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div>
+        Math: <input type="number" id="mathInput">
+        English: <input type="number" id="englishInput">
+        <button id="submitBtn">Submit</button>
+    </div>
+
+    <br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Math</th>
+                <th>English</th>
+                <th>Average</th>
+            </tr>
+        </thead>
+        <tbody id="gradeBody">
+            </tbody>
+        <tfoot>
+            <tr>
+                <th>Average</th>
+                <td id="mathAvg"></td>
+                <td id="englishAvg"></td>
+                <td id="overallAvg"></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
